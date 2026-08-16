@@ -4,6 +4,8 @@
 :root {
   --color-primary: #fffeef;
   --color-secondary: #40110d;
+  --color-tertiary: #f0e7da;
+  --color-beige: #b0a999;
 }
 
 body {
@@ -37,6 +39,12 @@ h1 {
   text-transform: uppercase;
 }
 
+h2 {
+  font-size: 2.25rem;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
 .hero-section p {
   width: 36em;
   text-align: center;
@@ -68,4 +76,56 @@ hr {
   height: 1px;
   background-color: var(--color-primary);
   margin-bottom: 1.15rem;
+}
+
+.products-section {
+  padding: 4rem 1.75rem;
+}
+
+.books-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5em;
+}
+
+.book-card {
+  min-width: 16rem;
+  padding: 0.75rem 0.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
+  background-color: var(--color-tertiary);
+  text-decoration: none;
+  text-align: center;
+  color: black;
+  transition: background-color 0.5s ease;
+}
+
+.book-card:hover {
+  background-color: var(--color-beige);
+}
+
+.book-image {
+  width: 10em;
+  padding: 1.25rem;
+}
+
+.book-title {
+  font-size: 1.15rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.book-author {
+  font-size: 0.75rem;
+  font-weight: 300;
+}
+
+.book-price {
+  margin-top: 2.5rem;
+  font-size: 1.15rem;
+  font-weight: bold;
 }
