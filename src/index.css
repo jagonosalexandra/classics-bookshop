@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Besley:ital,wght@0,400..900;1,400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+:root {
+  --color-primary: #fffeef;
+  --color-secondary: #40110d;
+}
+
+body {
+  background-color: var(--color-primary);
+  font-family: "Inter", sans-serif;
+}
+
+.hero-section {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("assets/hero-background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: darken;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  align-items: center;
+  color: var(--color-primary);
+}
+
+h1 {
+  margin: 0;
+  font-family: "Besley", sans-serif;
+  font-size: 3.5em;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.hero-section p {
+  width: 36em;
+  text-align: center;
+}
+
+.button {
+  margin-top: 1.25rem;
+  padding: 0.85rem 1.25rem;
+  font-size: 1.15rem;
+}
+
+.button-primary {
+  border: 3px solid var(--color-primary);
+  color: var(--color-primary);
+  background: none;
+  transition:
+    background-color 0.5s ease-in,
+    color 0.5s ease;
+}
+
+.button-primary:hover {
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+}
+
+hr {
+  border: none;
+  width: 25em;
+  height: 1px;
+  background-color: var(--color-primary);
+  margin-bottom: 1.15rem;
+}
