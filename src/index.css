@@ -9,12 +9,38 @@
 }
 
 body {
+  margin: 0;
   background-color: var(--color-primary);
   font-family: "Inter", sans-serif;
 }
 
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.25rem 1.75rem;
+  background-color: var(--color-secondary);
+  text-decoration: none;
+}
+
+.logo {
+  text-decoration: none;
+  font-family: "Besley";
+  font-weight: bold;
+  color: var(--color-primary);
+}
+
+nav ul {
+  display: flex;
+  gap: 2.25rem;
+}
+
+.navlink {
+  text-decoration: none;
+  color: var(--color-primary);
+}
+
 .hero-section {
-  width: 100vw;
   height: 100vh;
   background-image: url("assets/hero-background.jpg");
   background-size: cover;
@@ -37,6 +63,7 @@ h1 {
   font-size: 3.5em;
   font-weight: 900;
   text-transform: uppercase;
+  text-align: center;
 }
 
 h2 {
@@ -128,4 +155,32 @@ hr {
   margin-top: 2.5rem;
   font-size: 1.15rem;
   font-weight: bold;
+}
+
+.page-header {
+  width: 100vw;
+  height: 24vh;
+  background-image: url("assets/page-header.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: darken;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  align-items: center;
+  color: var(--color-primary);
+}
+
+.about {
+  padding: 2.5rem 5rem;
+  text-align: center;
+  line-height: 1.75rem;
+}
+
+.about p {
+  margin-bottom: 2.25rem;
 }
