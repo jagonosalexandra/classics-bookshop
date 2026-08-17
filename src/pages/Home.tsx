@@ -32,6 +32,7 @@ function Home() {
               key={book._id}
               to={`/product/${book._id}`}
               className="book-card"
+              onClick={() => scrollTo(0, 0)}
             >
               <img className="book-image" src={book.image} alt={book.title} />
               <div>
