@@ -250,7 +250,7 @@ hr {
   font-size: 2rem;
 }
 
-.book-not-found-container {
+.not-found-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -259,14 +259,14 @@ hr {
   text-align: center;
 }
 
-.book-not-found-container p {
+.not-found-container p {
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
   margin-bottom: 6rem;
 }
 
-.book-not-found-container span {
+.not-found-text {
   font-size: 5rem;
   font-weight: bold;
   color: var(--color-secondary);
