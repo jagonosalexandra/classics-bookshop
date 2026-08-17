@@ -7,14 +7,14 @@ function Navbar() {
         Classics Bookshop
       </Link>
 
-      <ul>
+      <div>
         <NavLink className="navlink" to="/">
           Home
         </NavLink>
         <NavLink className="navlink" to="/about">
           About
         </NavLink>
-      </ul>
+      </div>
     </nav>
   );
 }

@@ -24,7 +24,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.25rem 1.75rem;
+  padding: 1.15rem 1.75rem;
   background-color: var(--color-secondary);
   text-decoration: none;
 }
@@ -36,7 +36,7 @@ nav {
   color: var(--color-primary);
 }
 
-nav ul {
+nav div {
   display: flex;
   gap: 2.25rem;
 }
