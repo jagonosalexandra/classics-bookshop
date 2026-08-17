@@ -11,9 +11,9 @@ function ProductDetail() {
 
   if (!book)
     return (
-      <div className="book-not-found-container">
+      <div className="not-found-container">
         <p>
-          <span>Book Not Found</span>
+          <span className="not-found-text">Book Not Found</span>
           Sorry, we couldn't find the book you're looking for. The product ID
           you have entered may be incorrect.
         </p>
