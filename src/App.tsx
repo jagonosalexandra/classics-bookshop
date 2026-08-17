@@ -5,12 +5,13 @@ import About from "./pages/About";
 import NotFound from "./pages/NotFound";
 import Navbar from "./components/Navbar";
 import ProductDetail from "./pages/ProductDetail";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
     <div style={{ display: "flex", flexDirection: "column" }}>
+      <ScrollToTop />
       <Navbar />
-
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
