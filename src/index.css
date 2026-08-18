@@ -6,6 +6,7 @@
   --color-secondary: #40110d;
   --color-tertiary: #f0e7da;
   --color-beige: #b0a999;
+  --color-red: #4d0f09;
 }
 
 html {
@@ -38,12 +39,24 @@ nav {
 
 nav div {
   display: flex;
+  align-items: center;
   gap: 2.25rem;
 }
 
 .navlink {
   text-decoration: none;
   color: var(--color-primary);
+}
+
+#login-btn {
+  padding: 0.5rem 1.5rem;
+  border: none;
+  border-radius: 2.5rem;
+  font-weight: bold;
+  font-size: 1.15rem;
+  background-color: var(--color-tertiary);
+  color: var(--color-secondary);
+  transition: background-color 0.5s ease;
 }
 
 .hero-section {
