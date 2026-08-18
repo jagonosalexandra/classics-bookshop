@@ -284,3 +284,55 @@ hr {
   font-weight: bold;
   color: var(--color-secondary);
 }
+
+.login-container {
+  padding: 2.5rem 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1.25rem;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.25rem;
+}
+
+input {
+  min-width: 16rem;
+  padding: 0.5rem 1.15rem;
+  outline: none;
+  border: 2px solid var(--color-secondary);
+  background-color: var(--color-primary);
+}
+
+.text-error {
+  font-size: small;
+  color: var(--color-red);
+}
+
+button[type="submit"] {
+  margin-top: 1.25rem;
+  padding: 0.85rem 1.25rem;
+  font-size: 1.15rem;
+  border: 3px solid var(--color-secondary);
+  color: var(--color-secondary);
+  background: none;
+  transition:
+    background-color 0.5s ease-in,
+    color 0.5s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+}
