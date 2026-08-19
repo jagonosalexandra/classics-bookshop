@@ -11,9 +11,13 @@ import ScrollToTop from "./components/ScrollToTop";
 import Login from "./pages/Login";
 import ProtectedRoute from "./components/ProtectedRoute";
 import Dashboard from "./pages/Dashboard";
+import { useLocalStorage } from "./hooks/useLocalStorage";
 
 function App() {
-  const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false);
+  const [isAuthenticated, setIsAuthenticated] = useLocalStorage(
+    "isAuthenticated",
+    false,
+  );
 
   return (
     <div style={{ display: "flex", flexDirection: "column" }}>
