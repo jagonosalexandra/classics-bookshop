@@ -43,9 +43,6 @@ function Login({ onLoginSuccess }: { onLoginSuccess: () => void }) {
     const adminUsername = import.meta.env.VITE_ADMIN_USERNAME;
     const adminPassword = import.meta.env.VITE_ADMIN_PASSWORD;
 
-    console.log(username, password);
-    console.log(adminUsername, adminPassword);
-
     if (!username) {
       newErrors.username = "Please fill in username";
     } else if (username !== adminUsername) {
