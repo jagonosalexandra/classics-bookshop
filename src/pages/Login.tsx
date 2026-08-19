@@ -1,5 +1,5 @@
-import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useForm } from "../hooks/useForm";
 
 interface Admin {
   username: string;
@@ -13,23 +13,14 @@ interface FormErrors {
 
 function Login({ onLoginSuccess }: { onLoginSuccess: () => void }) {
   const navigate = useNavigate();
-
-  const [formData, setFormData] = useState<Admin>({
-    username: "",
-    password: "",
-  });
-  const [errors, setErrors] = useState<FormErrors>({});
-
-  function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
-    const { name, value } = e.target;
-
-    setFormData((prevData) => ({ ...prevData, [name]: value }));
-  }
+  const { values, handleChange, errors, runValidation } = useForm<Admin>(
+    { username: "", password: "" },
+    validateForm,
+  );
 
   function handleSubmit(e: React.SubmitEvent<HTMLFormElement>) {
     e.preventDefault();
-    const newErrors = validateForm(formData);
-    setErrors(newErrors);
+    const newErrors = runValidation();
 
     if (Object.keys(newErrors).length > 0) return;
 
@@ -68,7 +59,7 @@ function Login({ onLoginSuccess }: { onLoginSuccess: () => void }) {
           <input
             type="text"
             name="username"
-            value={formData.username}
+            value={values.username}
             onChange={handleChange}
           />
           {errors.username && (
@@ -81,7 +72,7 @@ function Login({ onLoginSuccess }: { onLoginSuccess: () => void }) {
           <input
             type="password"
             name="password"
-            value={formData.password}
+            value={values.password}
             onChange={handleChange}
           />
           {errors.password && (
