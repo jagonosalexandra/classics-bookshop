@@ -1,13 +1,10 @@
 import { Link, NavLink, useNavigate } from "react-router-dom";
+import { useAuth } from "../hooks/useAuth";
 
-function Navbar({
-  isAuthenticated,
-  onLogout,
-}: {
-  isAuthenticated: boolean;
-  onLogout: () => void;
-}) {
+function Navbar() {
   const navigate = useNavigate();
+
+  const { isAuthenticated, logout } = useAuth();
 
   return (
     <nav>
@@ -24,7 +21,7 @@ function Navbar({
         </NavLink>
         <button
           id="login-btn"
-          onClick={isAuthenticated ? onLogout : () => navigate("/login")}
+          onClick={isAuthenticated ? logout : () => navigate("/login")}
         >
           {isAuthenticated ? "Logout" : "Login"}
         </button>

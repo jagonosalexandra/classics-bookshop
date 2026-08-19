@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { useForm } from "../hooks/useForm";
+import { useAuth } from "../hooks/useAuth";
 
 interface Admin {
   username: string;
@@ -11,8 +12,10 @@ interface FormErrors {
   password?: string;
 }
 
-function Login({ onLoginSuccess }: { onLoginSuccess: () => void }) {
+function Login() {
   const navigate = useNavigate();
+  const { login } = useAuth();
+
   const { values, handleChange, errors, runValidation } = useForm<Admin>(
     { username: "", password: "" },
     validateForm,
@@ -24,7 +27,7 @@ function Login({ onLoginSuccess }: { onLoginSuccess: () => void }) {
 
     if (Object.keys(newErrors).length > 0) return;
 
-    onLoginSuccess();
+    login();
     navigate("/dashboard");
   }
 
