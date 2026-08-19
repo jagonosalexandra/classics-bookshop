@@ -8,8 +8,8 @@ function NotFound() {
     <div className="not-found-container">
       <p>
         <span className="not-found-text">Page Not Found</span>
-        Sorry, we couldn't find the page you were looking for. It may have
-        movved or the web address you entered was incorrect.
+        Sorry, we couldn't find the page you were looking for. It may have moved
+        or the web address you entered was incorrect.
       </p>
 
       <Button
