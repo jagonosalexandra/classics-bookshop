@@ -25,7 +25,6 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/product/:id" element={<ProductDetail />} />
-        <Route path="*" element={<NotFound />} />
         <Route
           path="/login"
           element={<Login onLoginSuccess={() => setIsAuthenticated(true)} />}
@@ -38,6 +37,7 @@ function App() {
             </ProtectedRoute>
           }
         />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
   );
