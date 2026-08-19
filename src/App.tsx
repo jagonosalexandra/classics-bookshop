@@ -1,5 +1,4 @@
 import { Routes, Route } from "react-router-dom";
-import { useState } from "react";
 import { AuthContext } from "./context/AuthContext";
 import "./index.css";
 import Home from "./pages/Home";
@@ -14,7 +13,7 @@ import Dashboard from "./pages/Dashboard";
 import { useLocalStorage } from "./hooks/useLocalStorage";
 
 function App() {
-  const [isAuthenticated, setIsAuthenticated] = useLocalStorage(
+  const [isAuthenticated, setIsAuthenticated] = useLocalStorage<boolean>(
     "isAuthenticated",
     false,
   );
